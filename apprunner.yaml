@@ -11,4 +11,4 @@ run:
   command: python application.py
   network: 
     port: 8000
-    env: PORT 
+    env: FLASK_RUN_PORT 

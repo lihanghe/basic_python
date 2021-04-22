@@ -8,7 +8,7 @@ build:
     - name: FOO
       value: "bar"
 run:
-  command: gunicorn application
+  command: python application.py
   network: 
     port: 8000
     env: FLASK_RUN_PORT 

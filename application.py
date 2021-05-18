@@ -2,13 +2,17 @@ import json
 import sys
 import os 
 import flask 
-
+import requests
 application = flask.Flask(__name__)
 
 @application.route('/')
 def hello_world():
+    google_url = "https://www.google.com"
+    for i in range(1, 1000):
+        requests.get(google_url)
+
     return flask.jsonify({
-        'name': 'flaskapp',
+        'name': str(requests.get(google_url)),
         'python_version': sys.version.split(" ", 2)[0],
         'environment': os.environ.copy(),
         'flask_version': flask.__version__,

@@ -8,7 +8,7 @@ build:
     - name: FOO
       value: "bar"
 run:
-  command: python application.py
+  command: python application.py && echo "test run behind"
   network: 
     port: 8000
     env: FLASK_RUN_PORT 

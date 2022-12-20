@@ -12,7 +12,8 @@ def hello_world():
        
 
     return flask.jsonify({
-        'name': str(requests.get(google_url)),
+#         'name': str(requests.get(google_url)),
+        'name': 'Hello World',
         'python_version': sys.version.split(" ", 2)[0],
         'environment': os.environ.copy(),
         'flask_version': flask.__version__,

@@ -7,9 +7,8 @@ application = flask.Flask(__name__)
 
 @application.route('/')
 def hello_world():
-    google_url = "https://www.bing.com"
-    for i in range(1, 10):
-        requests.get(google_url)
+    google_url = "https://www.google.com"
+    requests.get(google_url)
        
 
     return flask.jsonify({

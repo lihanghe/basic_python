@@ -7,13 +7,13 @@ application = flask.Flask(__name__)
 
 @application.route('/')
 def hello_world():
-    google_url = "https://www.google.com"
+    # google_url = "https://www.google.com"
 #     requests.get(google_url)
        
 
     return flask.jsonify({
-        'name': str(requests.get(google_url)),
-#         'name': 'Hello World',
+        # 'name': str(requests.get(google_url)),
+        'name': 'Hello World',
         'python_version': sys.version.split(" ", 2)[0],
         'environment': os.environ.copy(),
         'flask_version': flask.__version__,

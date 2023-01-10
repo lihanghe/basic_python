@@ -8,6 +8,7 @@ build:
     - name: FOO
       value: "bar"
 run:
+  runtime-version: 3.3.3
   command: python application.py
   network: 
     port: 8000
